@@ -1,4 +1,4 @@
-// Gallery Block
+// Assuming data is from an API and it's already formatted
 const galleryData = [
   { src: "./images/steamed.jpg", alt: "Steamed meal" },
   { src: "./images/chef-select.jpg", alt: "Chef selecting ingredients" },
@@ -6,8 +6,11 @@ const galleryData = [
 ];
 
 const galleryContainer = document.getElementById("gallery-block");
+
+// Modal elements
 const modalElement = document.getElementById("img-modal");
 const modalImage = document.getElementById("modal-img");
+
 const imagesDiv = document.createElement("div");
 imagesDiv.className = "gallery-block-images";
 
@@ -30,6 +33,15 @@ galleryContainer.prepend(imagesDiv);
 // Close Modal
 modalElement.addEventListener("click", (e) => {
   if (e.target === modalElement) {
+    modalElement.style.display = "none";
+    modalImage.src = "";
+    modalImage.alt = "";
+  }
+});
+
+// Close modal via `Esc` key
+document.addEventListener("keydown", (e) => {
+  if (e.key === "Escape" && modalElement.style.display === "flex") {
     modalElement.style.display = "none";
     modalImage.src = "";
     modalImage.alt = "";
