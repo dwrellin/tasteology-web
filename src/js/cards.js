@@ -6,6 +6,7 @@ const cardsData = [
     title: "Red",
     description:
       "Red foods remind us of berries and soft fruits, so we anticipate a sweet taste.",
+    website: "https://www.orchard.com.au",
   },
   {
     img: "./images/green-spoon.jpg",
@@ -13,6 +14,7 @@ const cardsData = [
     title: "Green",
     description:
       "Fresh, zingy green colours are reminiscent of unripe fruit, promising sour or acid flavours.",
+    website: "https://google.com",
   },
   {
     img: "./images/white-spoon.jpg",
@@ -20,6 +22,7 @@ const cardsData = [
     title: "White",
     description:
       "White foods evoke memories of salt and salty flavours, driving the expectation of a savoury treat.",
+    website: "https://www.tasteology.com.au",
   },
 ];
 
@@ -46,7 +49,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   cardsData.forEach((card) => {
     const cardLink = document.createElement("a");
-    cardLink.href = "https://www.orchard.com.au/";
+    cardLink.href = card.website;
     cardLink.className = "cards-block-item";
 
     cardLink.addEventListener("click", (e) => {
