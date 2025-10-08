@@ -53,11 +53,11 @@ document.addEventListener("DOMContentLoaded", () => {
       // Can be removed if want to redirected to Orchard's website
       e.preventDefault();
 
-      // // Uncomment if above code is commented
-      // cardLink.target = "_blank";
-      // cardLink.rel = "noopener noreferrer";
+      // Need to comment `e.preventDefault()` to open in new tab.
+      cardLink.target = "_blank";
+      cardLink.rel = "noopener noreferrer";
 
-      console.log(`${card.title} clicked`);
+      console.log(`${card.title} clicked`, e.currentTarget);
     });
 
     const img = document.createElement("img");
