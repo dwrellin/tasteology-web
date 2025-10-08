@@ -1,0 +1,52 @@
+/* Modal */
+.modal {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  background: rgba(0, 0, 0, 0.5);
+  width: 100%;
+  height: 100%;
+}
+
+.modal .modal-content {
+  background: #fff;
+  border-radius: 12px;
+  padding: 24px;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 600px;
+  height: auto;
+}
+
+.modal .modal-content img {
+  width: 100%;
+  height: auto;
+}
+
+@media screen and (min-width: 320px) and (max-width: 480px) {
+  .modal {
+    width: 90%;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .modal .modal-content {
+    padding: 12px;
+  }
+}
+
+@media screen and (min-width: 481px) and (max-width: 767px) {
+  .modal {
+    width: 90%;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .modal .modal-content {
+    padding: 12px;
+  }
+}
