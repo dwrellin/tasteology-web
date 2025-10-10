@@ -40,7 +40,7 @@
   flex: 1;
 }
 
-.gallery-block .gallery-block-content h2 {
+.gallery-block .gallery-block-content .gallery-block-main-title {
   font-size: 30px;
   font-weight: 300;
   text-transform: uppercase;
@@ -51,14 +51,15 @@
   margin: 30px 0;
 }
 
-.gallery-block .gallery-block-content p {
+.gallery-block .gallery-block-content .gallery-block-main-description,
+.gallery-block .gallery-block-content .gallery-block-secondary-description {
   font-size: 21px;
   font-weight: 300;
   line-height: 1.43;
   margin-bottom: 30px;
 }
 
-.gallery-block .gallery-block-content h3 {
+.gallery-block .gallery-block-content .gallery-block-secondary-title {
   color: #cf1430;
   font-size: 15px;
   font-weight: 700;
@@ -67,7 +68,10 @@
   margin-bottom: 10px;
 }
 
-.gallery-block .gallery-block-content h3 + p {
+.gallery-block
+  .gallery-block-content
+  .gallery-block-secondary-title
+  + .gallery-block-secondary-description {
   font-weight: 700;
 }
 
