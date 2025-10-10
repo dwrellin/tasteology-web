@@ -9,8 +9,9 @@ const galleryBlockData = {
   title: "What does cooking mean?",
   description:
     "Is it simply applying heat to a food product? A way of making certain food safe to eat? Or a way to create flavour and make food more appealing? This is just part of what Hervé This, the father of molecular gastronomy, has dedicated his life to finding out. We spoke to him to find out what his experiments have told him. And in the process even discovered the secret to cooking the perfect egg...",
-  subtitle: "The Perfect Egg",
-  subDescription: "Keep water between 67 and 68C for a flavourful, tender yolk",
+  secondaryTitle: "The Perfect Egg",
+  secondaryDescription:
+    "Keep water between 67 and 68°C for a flavourful, tender yolk",
 };
 
 const galleryContainer = document.getElementById("gallery-block");
@@ -19,8 +20,7 @@ const galleryContainer = document.getElementById("gallery-block");
 const modalElement = document.getElementById("img-modal");
 const modalImage = document.getElementById("modal-img");
 
-const imagesDiv = document.createElement("div");
-imagesDiv.className = "gallery-block-images";
+const imagesDiv = document.getElementsByClassName("gallery-block-images")[0];
 
 galleryData.forEach((item) => {
   const img = document.createElement("img");
@@ -38,32 +38,32 @@ galleryData.forEach((item) => {
 
 galleryContainer.prepend(imagesDiv);
 
-// Content below the gallery images
-const galleryBlockContent = document.getElementById("gallery-block-content");
+// Content adjacent to (Desktop) / below (Mobile) the gallery images
+const galleryBlockContent = document.getElementsByClassName(
+  "gallery-block-content"
+)[0];
 
 // "What does cooking mean?"
-const h2 = document.createElement("h2");
-h2.id = "gallery-heading";
-h2.textContent = galleryBlockData.title;
-galleryBlockContent.appendChild(h2);
+const mainTitle = document.getElementsByClassName(
+  "gallery-block-main-title"
+)[0];
+mainTitle.textContent = galleryBlockData.title;
 
-const hr = document.createElement("hr");
-// Hides from screen readers
-hr.setAttribute("aria-hidden", "true");
-galleryBlockContent.appendChild(hr);
-
-const p1 = document.createElement("p");
-p1.textContent = galleryBlockData.description;
-galleryBlockContent.appendChild(p1);
+const mainDescription = document.getElementsByClassName(
+  "gallery-block-main-description"
+)[0];
+mainDescription.textContent = galleryBlockData.description;
 
 // "The Perfect Egg"
-const h3 = document.createElement("h3");
-h3.textContent = galleryBlockData.subtitle;
-galleryBlockContent.appendChild(h3);
+const secondaryTitle = document.getElementsByClassName(
+  "gallery-block-secondary-title"
+)[0];
+secondaryTitle.textContent = galleryBlockData.secondaryTitle;
 
-const p2 = document.createElement("p");
-p2.textContent = galleryBlockData.subDescription;
-galleryBlockContent.appendChild(p2);
+const secondaryDescription = document.getElementsByClassName(
+  "gallery-block-secondary-description"
+)[0];
+secondaryDescription.textContent = galleryBlockData.secondaryDescription;
 
 // Close Modal
 modalElement.addEventListener("click", (e) => {
