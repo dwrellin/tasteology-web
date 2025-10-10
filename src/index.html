@@ -25,23 +25,62 @@
     <link rel="stylesheet" href="./css/modal.css" />
   </head>
   <body>
+    <noscript>
+      <div class="no-js-banner">
+        <p>
+          JavaScript is disabled in your browser. Please enable to view the page
+          properly.
+        </p>
+      </div>
+    </noscript>
+
     <div
       id="gallery-block"
       class="gallery-block"
       aria-labelledby="gallery-heading"
     >
+      <!-- Images go here (a max of three images can be displayed) -->
       <!-- galleryData (./src/gallery.js) goes here -->
 
-      <div id="gallery-block-content" class="gallery-block-content">
+      <div class="gallery-block-images">
+        <!-- Images goes here -->
+      </div>
+
+      <div class="gallery-block-content">
         <!-- 
           Didn't make `gallery-heading` in `galleryBlockData`
           as an `h1` as I assume that this is in the middle 
           section of the website, which has the main `h1` content.
         -->
+        <h2 class="gallery-block-main-title">
+          <!-- Title goes here -->
+        </h2>
+
+        <!-- Hides from screen readers -->
+        <hr aria-hidden="true" />
+
+        <p class="gallery-block-main-description">
+          <!-- Description goes here -->
+        </p>
+
+        <h3 class="gallery-block-secondary-title">
+          <!-- Secondary title goes here -->
+        </h3>
+
+        <p class="gallery-block-secondary-description">
+          <!-- Secondary description goes here -->
+        </p>
       </div>
     </div>
 
     <div id="cards-block" class="cards-block">
+      <h2 class="cards-block-main-title">
+        <!-- Title goes here -->
+      </h2>
+
+      <!-- Hides from screen readers -->
+      <hr aria-hidden="true" />
+
       <!-- cardsData (./src/cards.js) goes here -->
     </div>
 

@@ -33,14 +33,10 @@ const cardsBlockData = {
 document.addEventListener("DOMContentLoaded", () => {
   const cardsBlock = document.querySelector(".cards-block");
 
-  const h2 = document.createElement("h2");
-  h2.id = "cards-heading";
-  h2.textContent = cardsBlockData.title;
-  cardsBlock.appendChild(h2);
-
-  const hr = document.createElement("hr");
-  hr.ariaHidden = "true";
-  cardsBlock.appendChild(hr);
+  const mainTitle = document.getElementsByClassName(
+    "cards-block-main-title"
+  )[0];
+  mainTitle.textContent = cardsBlockData.title;
 
   const cardContainer = document.createElement("div");
   cardContainer.id = "cards-container";

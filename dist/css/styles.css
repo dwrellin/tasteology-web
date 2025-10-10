@@ -54,6 +54,13 @@ img {
   border: 0;
 }
 
+.no-js-banner {
+  padding: 24px;
+  background: lightslategray;
+  color: #fff;
+  text-align: center;
+}
+
 /* Shared parent styles */
 .gallery-block,
 .cards-block {
