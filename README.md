@@ -29,3 +29,8 @@ As of Oct 10, 2025:
 
 - Restructured HTML layout to improve SEO performance.
 - Implemented a `<noscript>` banner to inform users when JavaScript is disabled.
+
+As of Oct 11, 2025:
+
+- Added `<main>` and `<section>` landmarks.
+- Corrected the `aria-labelledby` reference.

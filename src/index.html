@@ -34,55 +34,57 @@
       </div>
     </noscript>
 
-    <div
-      id="gallery-block"
-      class="gallery-block"
-      aria-labelledby="gallery-heading"
-    >
-      <!-- Images go here (a max of three images can be displayed) -->
-      <!-- galleryData (./src/gallery.js) goes here -->
+    <main>
+      <section
+        id="gallery-block"
+        class="gallery-block"
+        aria-labelledby="gallery-block-heading"
+      >
+        <!-- Images go here (a max of three images can be displayed) -->
+        <!-- galleryData (./src/gallery.js) goes here -->
 
-      <div class="gallery-block-images">
-        <!-- Images goes here -->
-      </div>
+        <div class="gallery-block-images">
+          <!-- Images goes here -->
+        </div>
 
-      <div class="gallery-block-content">
-        <!-- 
-          Didn't make `gallery-block-main-title` an `h1` as I assume 
-          that this is in the middle section of the website, which has
-          the main `h1` content.
-        -->
-        <h2 class="gallery-block-main-title">
+        <div class="gallery-block-content">
+          <!-- 
+            Didn't make `gallery-block-main-title` an `h1` as I assume 
+            that this is in the middle section of the website, which has
+            the main `h1` content.
+          -->
+          <h2 id="gallery-block-heading" class="gallery-block-main-title">
+            <!-- Title goes here -->
+          </h2>
+
+          <!-- Hides from screen readers -->
+          <hr aria-hidden="true" />
+
+          <p class="gallery-block-main-description">
+            <!-- Description goes here -->
+          </p>
+
+          <h3 class="gallery-block-secondary-title">
+            <!-- Secondary title goes here -->
+          </h3>
+
+          <p class="gallery-block-secondary-description">
+            <!-- Secondary description goes here -->
+          </p>
+        </div>
+      </section>
+
+      <section id="cards-block" class="cards-block">
+        <h2 class="cards-block-main-title">
           <!-- Title goes here -->
         </h2>
 
         <!-- Hides from screen readers -->
         <hr aria-hidden="true" />
 
-        <p class="gallery-block-main-description">
-          <!-- Description goes here -->
-        </p>
-
-        <h3 class="gallery-block-secondary-title">
-          <!-- Secondary title goes here -->
-        </h3>
-
-        <p class="gallery-block-secondary-description">
-          <!-- Secondary description goes here -->
-        </p>
-      </div>
-    </div>
-
-    <div id="cards-block" class="cards-block">
-      <h2 class="cards-block-main-title">
-        <!-- Title goes here -->
-      </h2>
-
-      <!-- Hides from screen readers -->
-      <hr aria-hidden="true" />
-
-      <!-- cardsData (./src/cards.js) goes here -->
-    </div>
+        <!-- cardsData (./src/cards.js) goes here -->
+      </section>
+    </main>
 
     <div
       id="img-modal"
